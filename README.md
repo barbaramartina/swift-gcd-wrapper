@@ -1,7 +1,7 @@
 # swift-gcd-wrapper
 A wrapper on Swift [GCD](https://developer.apple.com/library/ios/documentation/Performance/Reference/GCD_libdispatch_Ref/) to make use of queues, qos, synchronous and asynchronous execution easily.
 
-In order to hide GCD specifics calls and avoid calling dispatch_async, dispatch_sync, creating customs queues or asking for the main or an specific background queue, I've created this wrapper.
+In order to hide GCD specifics logic and avoid calling dispatch_async, dispatch_sync, creating customs queues or asking for the main or an specific background queue, I've created this wrapper.
 
 This wrapper is also part of an effort to show how to use different kind of queues from GCD and is used as an explanatory example in my blog [Lady&Tech](http://ladyandtech.blogspot.de/).
 
