@@ -10,8 +10,10 @@ Basic structure of the wrapper
 
 ![basic structure](https://github.com/barbaramartina/swift-gcd-wrapper/blob/master/resources/basic-structure.png)
 
-The protocol **Executor** requiring the existence of a [dispatch queue(https://developer.apple.com/library/ios/documentation/Performance/Reference/GCD_libdispatch_Ref/#//apple_ref/c/tdef/dispatch_queue_t)].
-Executor defines a function to allow the execution of a [block](https://developer.apple.com/library/ios/documentation/Performance/Reference/GCD_libdispatch_Ref/#//apple_ref/c/tdef/dispatch_block_t), specifying if the execution mode: **Async** or **Sync**.
+The protocol **Executor** requires the existence of a [dispatch queue](https://developer.apple.com/library/ios/documentation/Performance/Reference/GCD_libdispatch_Ref/#//apple_ref/c/tdef/dispatch_queue_t).  
+
+Executor defines a function to allow the execution of a [block](https://developer.apple.com/library/ios/documentation/Performance/Reference/GCD_libdispatch_Ref/#//apple_ref/c/tdef/dispatch_block_t), specifying if the execution mode: **Async** or **Sync**.  
+
 
 ```Swift
         var queue : dispatch_queue_t { get }
@@ -19,7 +21,8 @@ Executor defines a function to allow the execution of a [block](https://develope
         func execute(mode: QueueExecutionMode, block: dispatch_block_t)
 ```        
 
-An extension on **Executor** defines a default implementation of the execute method.
+An extension on **Executor** defines a default implementation of the execute method.  
+
 
 ```Swift
         func execute(mode: QueueExecutionMode, block: dispatch_block_t) {
@@ -29,12 +32,14 @@ An extension on **Executor** defines a default implementation of the execute met
          }
         }
 ```
-There are three kind of queues, represented as structs, that you can use to execute your blocks:
+There are three kind of queues, represented as structs, that you can use to execute your blocks:  
+
 - **MainQueue**
 - **BackgroundQueue**
 - **CustomQueue**
 
-![GCD queues](https://github.com/barbaramartina/swift-gcd-wrapper/blob/master/resources/GCD%20queues.png)
+![GCD queues](https://github.com/barbaramartina/swift-gcd-wrapper/blob/master/resources/GCD%20queues.png)  
+
 
 **MainQueue** is mapping to the system serial main queue. <br>
 **BackgroundQueue** uses the system default provided background concurrent queues, according to the quality of service indicated. <br>
