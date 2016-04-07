@@ -43,7 +43,9 @@ There are three kind of queues, represented as structs, that you can use to exec
 
 **MainQueue** is mapping to the system serial main queue. <br>
 **BackgroundQueue** uses the system default provided background concurrent queues, according to the quality of service indicated. <br>
-**CustomQueue** wraps a serial or concurrent queue with a given name. <br>
+**CustomQueue** wraps a serial or concurrent queue with a given name. <br>  
+  
+  
 [Read more about QOS and energy efficiency guideline](https://developer.apple.com/library/mac/documentation/Performance/Conceptual/power_efficiency_guidelines_osx/PrioritizeWorkAtTheTaskLevel.html)
 
 
