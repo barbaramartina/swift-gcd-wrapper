@@ -1,4 +1,6 @@
 # swift-gcd-wrapper
+## This wrapper is based on Swift 2.3. Swift 3 came with a much more friendly sintax for GCD, somehow close to this wrapper. So now we can enjoy the new sintax.
+
 A wrapper on Swift [GCD](https://developer.apple.com/library/ios/documentation/Performance/Reference/GCD_libdispatch_Ref/) to make use of queues, qos, synchronous and asynchronous execution easily.
 
 In order to hide GCD specifics logic and avoid calling dispatch_async, dispatch_sync, creating customs queues or asking for the main or an specific background queue, I've created this wrapper.
